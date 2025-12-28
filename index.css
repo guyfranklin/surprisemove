@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+    --color-gnar-black: #0a0a0a;
+    --color-acid-green: #ccff00;
+    --color-shock-pink: #ff00cc;
+    --color-electric-blue: #00ffff;
+    --color-tape-gray: #d1d5db;
+
+    --font-sans: Anton, sans-serif;
+    --font-mono: "Courier Prime", monospace;
+    --font-marker: "Permanent Marker", cursive;
+
+    --image-noise: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+
+    --shadow-hard: 4px 4px 0px 0px #000;
+    --shadow-hard-white: 4px 4px 0px 0px #fff;
+    --shadow-hard-pink: 6px 6px 0px 0px #ff00cc;
+    --shadow-hard-green: 6px 6px 0px 0px #ccff00;
+    --shadow-hard-black: 6px 6px 0px 0px #000;
+}
+
+body {
+    background-color: var(--color-gnar-black);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.glitch-wrapper {
+    position: relative;
+}
+
+.tape-effect {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    transform: rotate(-2deg);
+    backdrop-filter: blur(2px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-gnar-black);
+    border-left: 1px solid #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-acid-green);
+    border: 2px solid var(--color-gnar-black);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-shock-pink);
+}
+
+/* Text Effects */
+.text-outline {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+.grunge-shadow {
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 1));
+}
+
+.grunge-shadow-light {
+    filter: drop-shadow(4px 4px 0px rgba(255, 255, 255, 0.1));
+}
+
+/* Gritty Filter Class */
+.font-gritty {
+    filter: url(#gritty-text);
+}
